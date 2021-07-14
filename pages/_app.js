@@ -1,10 +1,10 @@
-import { createGlobalStyle, ThemeProvider } from 'styled-components'
-import { AlurakutStyles} from '../src/lib/AlurakutCommons';
+import { createGlobalStyle, ThemeProvider } from "styled-components";
+import { AlurakutStyles } from "../src/lib/AlurakutCommons";
 
 const GlobalStyle = createGlobalStyle`
 
   /* Reset CSS */
-  *{
+  * {
     margin: 0;
     padding: 0;  
     box-sizing: border-box;
@@ -18,7 +18,7 @@ const GlobalStyle = createGlobalStyle`
   #__next{
     display: flex;
     min-height: 100vh;
-    flex-direciton: column;
+    flex-direction: column;
   }
 
   img{
@@ -28,13 +28,13 @@ const GlobalStyle = createGlobalStyle`
   }
 
   ${AlurakutStyles}
-`
+`;
 
 const theme = {
   colors: {
-    primary: '#0070f3',
+    primary: "#0070f3",
   },
-}
+};
 
 export default function App({ Component, pageProps }) {
   return (
@@ -44,5 +44,5 @@ export default function App({ Component, pageProps }) {
         <Component {...pageProps} />
       </ThemeProvider>
     </>
-  )
+  );
 }
